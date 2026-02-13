@@ -19,13 +19,13 @@
 <body class="overflow-x-hidden bg-black text-white">
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <video class="video-bg" autoplay muted loop playsinline poster="{{ url_for('static', filename='apsppt1.png') }}">
-            <source src="{{ url_for('static', filename='aps광고2.mp4') }}" type="video/mp4">
+        <video class="video-bg" autoplay muted loop playsinline poster="static/apsppt1.png">
+            <source src="static/aps광고2.mp4" type="video/mp4">
         </video>
         <div class="overlay absolute inset-0"></div>
 
         <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
-            <img src="{{ url_for('static', filename='aps로고.png') }}" alt="APS Logo" class="w-48 md:w-64 mx-auto mb-8 drop-shadow-2xl">
+            <img src="static/aps로고.png" alt="APS Logo" class="w-48 md:w-64 mx-auto mb-8 drop-shadow-2xl">
             
             <h1 class="text-4xl md:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">
                 오늘 아침도 <span class="text-red-500">지옥철</span>입니까?
@@ -49,7 +49,7 @@
             
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2" data-aos="fade-right">
-                    <img src="{{ url_for('static', filename='apsppt2.png') }}" alt="Tech Spec" class="rounded-2xl shadow-2xl border border-slate-700 w-full hover:scale-[1.02] transition duration-500">
+                    <img src="static/apsppt2.png" alt="Tech Spec" class="rounded-2xl shadow-2xl border border-slate-700 w-full hover:scale-[1.02] transition duration-500">
                 </div>
                 <div class="w-full md:w-1/2 space-y-8" data-aos="fade-left">
                     <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-cyan-500">
@@ -76,7 +76,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <div class="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer" data-aos="fade-right">
                     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black">
-                        <img src="{{ url_for('static', filename='aps검정색 누끼.png') }}" alt="Neon Black" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
+                        <img src="static/aps검정색 누끼.png" alt="Neon Black" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-95"></div>
                     <div class="absolute bottom-0 left-0 p-8 transition-all duration-500 group-hover:translate-y-10 group-hover:opacity-0">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer" data-aos="fade-left">
                     <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-white">
-                        <img src="{{ url_for('static', filename='aps흰색 누끼.png') }}" alt="Arctic White" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
+                        <img src="static/aps흰색 누끼.png" alt="Arctic White" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-30 transition-opacity duration-500 group-hover:opacity-90 group-hover:bg-gradient-to-t group-hover:from-black/90"></div>
                     <div class="absolute bottom-0 left-0 p-8 transition-all duration-500 group-hover:translate-y-10 group-hover:opacity-0">
@@ -124,21 +124,21 @@
                 <div class="group" data-aos="fade-up" data-aos-delay="100">
                     <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
                         <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                            <source src="{{ url_for('static', filename='aps광고1.mp4') }}" type="video/mp4">
+                            <source src="static/aps광고1.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
                 <div class="group" data-aos="fade-up" data-aos-delay="200">
                     <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
                         <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                            <source src="{{ url_for('static', filename='aps광고2.mp4') }}" type="video/mp4">
+                            <source src="static/aps광고2.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
                 <div class="group" data-aos="fade-up" data-aos-delay="300">
                     <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
                         <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                            <source src="{{ url_for('static', filename='aps광고3.mp4') }}" type="video/mp4">
+                            <source src="static/aps광고3.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -155,17 +155,15 @@
             </div>
 
             <div class="max-w-4xl mx-auto bg-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col border border-slate-700">
-                <img src="{{ url_for('static', filename='apsppt4.png') }}" alt="VIP Benefits" class="w-full h-auto">
+                <img src="static/apsppt4.png" alt="VIP Benefits" class="w-full h-auto">
 
                 <div class="w-full p-8 md:p-12 bg-slate-800 border-t border-slate-700">
-                    {% if success %}
-                    <div class="bg-green-600 text-white p-4 rounded-xl mb-6 text-center animate-bounce shadow-lg">
-                        ✅ <strong>예약이 완료되었습니다!</strong><br>곧 안내 메일을 보내드리겠습니다.
-                    </div>
-                    {% endif %}
-
+                    
                     <h3 class="text-2xl font-bold mb-6 text-center">VIP 사전 예약 신청서</h3>
-                    <form action="/submit" method="POST" class="space-y-5">
+                    
+                    <form name="aps-preorder" method="POST" data-netlify="true" action="/success.html" class="space-y-5">
+                        <input type="hidden" name="form-name" value="aps-preorder" />
+
                         <div>
                             <label class="block text-sm text-gray-400 mb-1">이름</label>
                             <input type="text" name="name" required class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
@@ -211,20 +209,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-        // ★ [핵심] 예약 성공 시(success가 True일 때) 실행되는 스크립트 ★
-        // 페이지가 로드되면 브라우저에게 "preorder 섹션으로 스크롤을 내려!"라고 명령함
-        {% if success %}
-        window.addEventListener('load', function() {
-            const section = document.getElementById('preorder');
-            if (section) {
-                // 부드럽지 않고 즉시 이동(auto)하거나, 부드럽게(smooth) 이동 선택 가능
-                section.scrollIntoView({ behavior: 'auto', block: 'center' });
-            }
-        });
-        {% endif %}
-    </script>
+    <script> AOS.init(); </script>
 </body>
 </html>
