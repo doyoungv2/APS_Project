@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APS - Air Pressing Shoes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        .video-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: -1;
+        }
+        .overlay { background: rgba(0, 0, 0, 0.4); }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-black text-white">
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video class="video-bg" autoplay muted loop playsinline poster="{{ url_for('static', filename='apsppt1.png') }}">
+            <source src="{{ url_for('static', filename='aps광고2.mp4') }}" type="video/mp4">
+        </video>
+        <div class="overlay absolute inset-0"></div>
+
+        <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
+            <img src="{{ url_for('static', filename='aps로고.png') }}" alt="APS Logo" class="w-48 md:w-64 mx-auto mb-8 drop-shadow-2xl">
+            
+            <h1 class="text-4xl md:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">
+                오늘 아침도 <span class="text-red-500">지옥철</span>입니까?
+            </h1>
+            <p class="text-xl md:text-3xl font-light mb-10 text-gray-200 drop-shadow-md">
+                출근 시간을 절반으로 줄이고 싶다면<br>
+                <span class="font-bold text-cyan-400">APS (Air Pressing Shoes)</span>
+            </p>
+            <a href="#preorder" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-12 rounded-full transition transform hover:scale-105 shadow-[0_0_20px_rgba(34,211,238,0.6)]">
+                사전 예약하기
+            </a>
+        </div>
+    </header>
+
+    <section class="py-24 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-cyan-500 font-bold tracking-widest text-sm">TECHNICAL SPECIFICATION</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-white">APS 핵심 기술</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <img src="{{ url_for('static', filename='apsppt2.png') }}" alt="Tech Spec" class="rounded-2xl shadow-2xl border border-slate-700 w-full hover:scale-[1.02] transition duration-500">
+                </div>
+                <div class="w-full md:w-1/2 space-y-8" data-aos="fade-left">
+                    <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-cyan-500">
+                        <h3 class="text-2xl font-bold text-cyan-300">AirPress 모듈</h3>
+                        <p class="text-gray-400 mt-2">최대 추진력 120kgf. 고성능 마이크로 터빈이 당신을 공중으로 띄웁니다.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-purple-500">
+                        <h3 class="text-2xl font-bold text-purple-300">IMU + AI 안정화</h3>
+                        <p class="text-gray-400 mt-2">6축 자이로 센서 기반. 흔들림 없는 편안함을 위해 초당 500회 밸런스를 잡습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white text-gray-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gray-500 font-bold tracking-widest text-sm">DESIGN & OPTIONS</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2">도시를 위한 두 가지 스타일</h2>
+                <p class="text-gray-600 mt-4 text-lg">마우스를 올려 자세한 스펙을 확인하세요.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black">
+                        <img src="{{ url_for('static', filename='aps검정색 누끼.png') }}" alt="Neon Black" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-95"></div>
+                    <div class="absolute bottom-0 left-0 p-8 transition-all duration-500 group-hover:translate-y-10 group-hover:opacity-0">
+                        <h3 class="text-4xl font-bold text-white mb-2">Neon Black</h3>
+                        <p class="text-cyan-400">Night Flight Edition</p>
+                    </div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center opacity-0 transition-all duration-500 group-hover:opacity-100">
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-6">Neon Black Details</h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">야간 비행을 위한 압도적 존재감.<br>LED 내비게이션 라이트와 스텔스 카본 텍스처로 밤하늘을 지배하십시오.</p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center"><span class="text-cyan-500 mr-2">■</span> 고광량 LED 안전등 탑재</li>
+                            <li class="flex items-center"><span class="text-cyan-500 mr-2">■</span> 매트 블랙 카본 마감</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-white">
+                        <img src="{{ url_for('static', filename='aps흰색 누끼.png') }}" alt="Arctic White" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 transition-all duration-700 group-hover:scale-110 group-hover:blur-sm group-hover:opacity-50">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-30 transition-opacity duration-500 group-hover:opacity-90 group-hover:bg-gradient-to-t group-hover:from-black/90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 transition-all duration-500 group-hover:translate-y-10 group-hover:opacity-0">
+                        <h3 class="text-4xl font-bold text-gray-900 group-hover:text-white mb-2 transition">Arctic White</h3>
+                        <p class="text-blue-500">Urban Day Edition</p>
+                    </div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center opacity-0 transition-all duration-500 group-hover:opacity-100">
+                        <h3 class="text-3xl font-bold text-blue-400 mb-6">Arctic White Details</h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">도심 속 가장 세련된 비행.<br>순백의 경량 메쉬 소재와 미니멀한 디자인으로 어떤 스타일에도 완벽하게 녹아듭니다.</p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">■</span> 초경량 브리더블 메쉬</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">■</span> 오염 방지 나노 코팅 (IP56)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-cyan-500 font-bold tracking-widest text-sm">MEDIA GALLERY</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-white">APS TEASER FILM</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
+                        <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                            <source src="{{ url_for('static', filename='aps광고1.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
+                        <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                            <source src="{{ url_for('static', filename='aps광고2.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-lg relative">
+                        <video controls class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                            <source src="{{ url_for('static', filename='aps광고3.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preorder" class="py-24 bg-gradient-to-br from-slate-900 to-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="zoom-in">
+                <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">LIMITED EDITION</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-2">지금 바로 비행을 예약하세요</h2>
+                <p class="text-xl text-gray-400">$4,000 / 2026. 03 Official Release</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col border border-slate-700">
+                <img src="{{ url_for('static', filename='apsppt4.png') }}" alt="VIP Benefits" class="w-full h-auto">
+
+                <div class="w-full p-8 md:p-12 bg-slate-800 border-t border-slate-700">
+                    {% if success %}
+                    <div class="bg-green-600 text-white p-4 rounded-xl mb-6 text-center animate-bounce shadow-lg">
+                        ✅ <strong>예약이 완료되었습니다!</strong><br>곧 안내 메일을 보내드리겠습니다.
+                    </div>
+                    {% endif %}
+
+                    <h3 class="text-2xl font-bold mb-6 text-center">VIP 사전 예약 신청서</h3>
+                    <form action="/submit" method="POST" class="space-y-5">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">이름</label>
+                            <input type="text" name="name" required class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">연락처</label>
+                            <input type="tel" name="phone" placeholder="010-0000-0000" required class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-1">이메일</label>
+                            <input type="email" name="email" required class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                             <div>
+                                <label class="block text-sm text-gray-400 mb-1">모델 선택</label>
+                                <select name="model" class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
+                                    <option value="Neon Black">Neon Black</option>
+                                    <option value="Arctic White">Arctic White</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">사이즈 (mm)</label>
+                                <select name="size" class="w-full bg-slate-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-cyan-500 outline-none transition">
+                                    <option value="250">250</option>
+                                    <option value="260">260</option>
+                                    <option value="270" selected>270</option>
+                                    <option value="280">280</option>
+                                    <option value="290">290</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 rounded-xl transition duration-300 text-lg shadow-lg mt-6">
+                            예약 제출하기
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-10 text-center text-sm border-t border-gray-800">
+        &copy; 2026 APS (Air Pressing Shoes). All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // ★ [핵심] 예약 성공 시(success가 True일 때) 실행되는 스크립트 ★
+        // 페이지가 로드되면 브라우저에게 "preorder 섹션으로 스크롤을 내려!"라고 명령함
+        {% if success %}
+        window.addEventListener('load', function() {
+            const section = document.getElementById('preorder');
+            if (section) {
+                // 부드럽지 않고 즉시 이동(auto)하거나, 부드럽게(smooth) 이동 선택 가능
+                section.scrollIntoView({ behavior: 'auto', block: 'center' });
+            }
+        });
+        {% endif %}
+    </script>
+</body>
+</html>
